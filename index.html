@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biopython Workbench — Free Offline DNA &amp; Protein Sequence Analysis</title>
+<meta name="description" content="A free, offline Windows desktop app for everyday DNA and protein sequence analysis. No install, no Python required — just download and run.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M8 4 C8 10, 24 10, 24 16 C24 22, 8 22, 8 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M24 4 C24 10, 8 10, 8 16 C8 22, 24 22, 24 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/>
+      </svg>
+      <span>Biopython Workbench</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#features">Features</a>
+      <a href="#who">Who it's for</a>
+      <a href="#download">Download</a>
+      <a href="https://buymeacoffee.com/biopythonworkbench" target="_blank" rel="noopener">Support the project</a>
+    </nav>
+    <a href="#download" class="btn btn-primary btn-nav">Download</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Free &middot; Offline &middot; Single .exe</p>
+      <h1>DNA and protein sequence analysis, without the price tag or the install.</h1>
+      <p class="hero-sub">
+        Batch-import FASTA/GenBank files, get instant stats, restriction maps, a virtual gel,
+        and a quick phylogenetic tree — all on your own machine, no license and no cloud upload required.
+      </p>
+      <div class="hero-actions">
+        <a href="downloads/BiopythonWorkbench.exe" class="btn btn-primary btn-lg" download>
+          Download for Windows
+        </a>
+        <span class="hero-meta">Portable .exe &middot; No install &middot; No Python needed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="positioning">
+    <div class="container positioning-inner">
+      <p>
+        Tools like SnapGene and Geneious are excellent — and expensive, and online-only, or both.
+        Biopython Workbench covers the everyday 80%: quick sequence checks, restriction digests, primer
+        sanity checks, and a rough tree, entirely offline, for free, with nothing to configure.
+      </p>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>What it does</h2>
+      <p class="section-sub">Import once, then explore every sequence through the same set of tools.</p>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <h3>Batch import &amp; analysis</h3>
+          <p>FASTA/GenBank files or pasted text, many sequences at once. A bad file in the batch doesn't take down the rest — failures are isolated per-sequence.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Per-sequence stats</h3>
+          <p>Nucleotide counts, GC%, molecular weight, melting temp (Wallace), 6-frame ORF finder, translation, codon usage table, GC skew, reverse complement, and start/stop codon highlighting.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Restriction sites &amp; primers</h3>
+          <p>Customizable enzyme panel and a common-primer panel (T7/T3/SP6/M13 etc.), each with its own selection dialog, "Reset to Default," and a prompt to refresh results when your selection changes.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Visualizations</h3>
+          <p>A circular plasmid/vector map with annotations, restriction sites, and primers, plus a GC-content sliding-window graph — both copyable and savable as images directly from the results view.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Pairwise comparison</h3>
+          <p>Global alignment with identity/mismatch/gap stats and a classic 3-line alignment view.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Phylogenetic tree</h3>
+          <p>Builds its own progressive multiple-sequence alignment and clusters it via neighbor-joining — entirely offline, no external aligner. A practical approximation, clearly labeled as such, with guidance toward dedicated tools for publication-grade trees.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>In-silico digest &amp; virtual gel</h3>
+          <p>A fragment-size table plus a virtual gel chart: log-scale bands, largest fragments near the top, just like a real agarose gel photo.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Primer design tool</h3>
+          <p>Paste any primer and get Tm, GC%, and rough self-dimer/hairpin risk heuristics.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Sequence search</h3>
+          <p>Find and highlight every occurrence of a typed fragment in a sequence, with a live match count.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Split view</h3>
+          <p>Two independent result panes, each with its own search box, for eyeballing two sequences side by side.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Sessions</h3>
+          <p>Save and load a full analysis session as a JSON project file, so you can pick up right where you left off.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Export</h3>
+          <p>Analysis report as .txt, sequences as multi-FASTA — and it reveals the saved file in File Explorer when it's done.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="who" class="who">
+    <div class="container who-inner">
+      <h2>Who it's for</h2>
+      <ul class="who-list">
+        <li><strong>Students</strong> learning molecular biology who need quick, understandable answers.</li>
+        <li><strong>Educators</strong> demonstrating sequence analysis concepts without licensing headaches.</li>
+        <li><strong>Biotech hobbyists &amp; citizen scientists</strong> working on their own projects.</li>
+        <li><strong>Molecular biology researchers</strong> doing routine cloning and sequence-checking who want something fast, free, and local.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="download" class="download-cta">
+    <div class="container download-inner">
+      <h2>Get Biopython Workbench</h2>
+      <p>One portable file. No installer, no admin rights, no Python runtime to set up first.</p>
+      <a href="downloads/BiopythonWorkbench.exe" class="btn btn-primary btn-lg" download>
+        Download for Windows
+      </a>
+      <p class="download-meta">Windows 10/11 &middot; 64-bit &middot; Free</p>
+    </div>
+  </section>
+
+  <section id="support" class="support">
+    <div class="container support-inner">
+      <h2>Support the project</h2>
+      <p>
+        Biopython Workbench is free and always will be — no license, no subscription, no
+        catch. It's built and maintained by one person in their spare time. If it's saved
+        you a few hours or a SnapGene license fee, a coffee goes a long way toward keeping
+        development going.
+      </p>
+      <a href="https://buymeacoffee.com/biopythonworkbench" target="_blank" rel="noopener" class="btn btn-coffee">
+        &#9749; Buy me a coffee
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Built with Python, Biopython, PySide6/Qt, and Matplotlib.</p>
+    <p class="footer-note">
+      The tree, digest, and primer tools are practical everyday helpers, not a replacement for a
+      rigorous phylogenetics or cloning-design pipeline.
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "biopython-workbench-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static marketing/download site for Biopython Workbench",
+  "scripts": {
+    "start": "npx --yes serve . -l 5500"
+  }
+}
