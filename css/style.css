@@ -184,26 +184,10 @@ img, svg {
   gap: 18px;
 }
 
-.hero-link {
-  color: var(--brand);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.hero-link:hover {
-  text-decoration: underline;
-}
-
 .hero-meta,
 .download-meta {
   color: var(--text-muted);
   font-size: 0.9rem;
-}
-
-.hero-meta {
-  display: block;
-  margin-top: 14px;
 }
 
 /* Positioning strip */
