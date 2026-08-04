@@ -7,7 +7,7 @@ index.html
 css/style.css
 js/script.js
 assets/favicon.svg
-downloads/            <- put the packaged BiopythonWorkbench.exe here
+downloads/            <- local staging spot for BiopythonWorkbench.exe before release upload
 ```
 
 ## Running it in VS Code
@@ -27,8 +27,14 @@ Two options — pick whichever you already have:
    ```
 2. Open http://localhost:5500 in a browser.
 
-## Before publishing
+## Shipping a new build of the app
 
-Replace the placeholder in `downloads/` with the real PyInstaller-built
-`BiopythonWorkbench.exe`. The download buttons already point at
-`downloads/BiopythonWorkbench.exe`.
+The download buttons point at a stable GitHub Releases URL, not a file in
+this repo, so a new build does **not** require touching the Netlify site:
+
+```
+gh release upload latest downloads/BiopythonWorkbench.exe --clobber
+```
+
+Only push/redeploy the site itself when the HTML/CSS/JS changes. See
+`downloads/README.md` for details.
