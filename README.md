@@ -29,11 +29,13 @@ Two options — pick whichever you already have:
 
 ## Shipping a new build of the app
 
-The download buttons point at a stable GitHub Releases URL, not a file in
-this repo, so a new build does **not** require touching the Netlify site:
+The download buttons point at a stable GitHub Releases URL hosted on the
+[BioPythonWorkbench](https://github.com/matt2000-exe/BioPythonWorkbench) app
+repo, not this site repo — so a new build does **not** require touching the
+Netlify site:
 
 ```
-gh release upload latest downloads/BiopythonWorkbench.exe --clobber
+gh release upload latest BiopythonWorkbench.exe --clobber --repo matt2000-exe/BioPythonWorkbench
 ```
 
 Only push/redeploy the site itself when the HTML/CSS/JS changes. See

@@ -2,21 +2,22 @@
 
 This folder is no longer where the live download link points.
 
-The site's download buttons now point at a stable GitHub Releases URL:
+The site's download buttons now point at a stable GitHub Releases URL, hosted
+on the app's own repo (not this site repo):
 
 ```
-https://github.com/matt2000-exe/biopython-workbench-site/releases/download/latest/BiopythonWorkbench.exe
+https://github.com/matt2000-exe/BioPythonWorkbench/releases/download/latest/BiopythonWorkbench.exe
 ```
 
 That link never changes, so shipping a new build does **not** require
-redeploying the Netlify site. To publish a new build:
+redeploying the Netlify site. To publish a new build, from the
+`BioPythonWorkbench` project (wherever the built exe comes out):
 
 ```
-gh release upload latest downloads/BiopythonWorkbench.exe --clobber
+gh release upload latest BiopythonWorkbench.exe --clobber --repo matt2000-exe/BioPythonWorkbench
 ```
 
-(Run from the repo root, with the new `BiopythonWorkbench.exe` in this folder.
-`--clobber` replaces the existing asset in place.)
+`--clobber` replaces the existing asset in place.
 
 This folder still exists as a local staging spot for the exe before you
 upload it — it stays gitignored (`downloads/*.exe`) since the binary itself
