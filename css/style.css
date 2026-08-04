@@ -256,6 +256,56 @@ img, svg {
   font-size: 0.96rem;
 }
 
+/* Sample data */
+
+.sample-data {
+  padding: 88px 0;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.sample-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.sample-card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--brand);
+}
+
+.sample-card p {
+  margin: 0 0 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.btn-sample {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  padding: 9px 18px;
+  font-size: 0.9rem;
+}
+
+.btn-sample:hover {
+  background: var(--brand);
+  color: var(--brand-contrast);
+}
+
 /* Who */
 
 .who {
