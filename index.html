@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biopython Workbench — Free Offline DNA &amp; Protein Sequence Analysis</title>
-<meta name="description" content="A free, offline Windows desktop app for everyday DNA and protein sequence analysis. No install, no Python required — just download and run.">
+<title>Biopython Workbench — Free Offline DNA &amp; Protein Sequence Analysis and Cloning</title>
+<meta name="description" content="A free, offline Windows desktop app for everyday DNA and protein sequence analysis and light cloning work. No install, no Python required — just download and run.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,10 +34,11 @@
   <section class="hero">
     <div class="container hero-inner">
       <p class="eyebrow">Free &middot; Offline &middot; Single .exe</p>
-      <h1>DNA and protein sequence analysis, without the price tag or the install.</h1>
+      <h1>DNA and protein sequence analysis — and light cloning work — without the price tag or the install.</h1>
       <p class="hero-sub">
         Batch-import FASTA/GenBank files, get instant stats, restriction maps, a virtual gel,
-        and a quick phylogenetic tree — all on your own machine, no license and no cloud upload required.
+        a quick phylogenetic tree, and a Sequence Builder for splicing a gene into a vector —
+        all on your own machine, no license and no cloud upload required.
       </p>
       <div class="hero-actions">
         <a href="https://github.com/matt2000-exe/BioPythonWorkbench/releases/download/latest/BiopythonWorkbench.exe" class="btn btn-primary btn-lg" download>
@@ -53,7 +54,7 @@
       <p>
         Tools like SnapGene and Geneious are excellent — and expensive, and online-only, or both.
         Biopython Workbench covers the everyday 80%: quick sequence checks, restriction digests, primer
-        sanity checks, and a rough tree, entirely offline, for free, with nothing to configure.
+        sanity checks, light cloning work, and a rough tree, entirely offline, for free, with nothing to configure.
       </p>
     </div>
   </section>
@@ -72,17 +73,22 @@
 
         <article class="feature-card">
           <h3>Per-sequence stats</h3>
-          <p>Nucleotide counts, GC%, molecular weight, melting temp (Wallace), 6-frame ORF finder, translation, codon usage table, GC skew, reverse complement, and start/stop codon highlighting.</p>
+          <p>Nucleotide counts, GC%, molecular weight, melting temp (Wallace), 6-frame ORF finder, translation, codon usage split into Start/Stop/Other groups, GC skew, reverse complement, and start/stop codon highlighting with a live count in the row label.</p>
         </article>
 
         <article class="feature-card">
           <h3>Restriction sites &amp; primers</h3>
-          <p>Customizable enzyme panel and a common-primer panel (T7/T3/SP6/M13 etc.), each with its own selection dialog, "Reset to Default," and a prompt to refresh results when your selection changes.</p>
+          <p>Customizable enzyme and common-primer panels (T7/T3/SP6/M13 etc.), each with "Reset to Default" — a summary list plus an annotated on-sequence map, with an explicit "None found" rather than a blank sequence, and a prompt to re-run automatically when your selection changes.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>GenBank annotations</h3>
+          <p>For real annotated GenBank files, shown as a summary list and an on-sequence map — spans longer than one display line render as a continuous bar instead of getting silently dropped. Hidden entirely for plain FASTA files with nothing to show.</p>
         </article>
 
         <article class="feature-card">
           <h3>Visualizations</h3>
-          <p>A circular plasmid/vector map with annotations, restriction sites, and primers, plus a GC-content sliding-window graph — both copyable and savable as images directly from the results view.</p>
+          <p>A circular plasmid/vector map with annotations, restriction sites, and primers, plus a GC-content sliding-window graph — copyable and savable as images from the results view, or via right-click "Copy Image" on the row itself.</p>
         </article>
 
         <article class="feature-card">
@@ -92,7 +98,7 @@
 
         <article class="feature-card">
           <h3>Phylogenetic tree</h3>
-          <p>Builds its own progressive multiple-sequence alignment and clusters it via neighbor-joining — entirely offline, no external aligner. A practical approximation, clearly labeled as such, with guidance toward dedicated tools for publication-grade trees.</p>
+          <p>Builds its own progressive multiple-sequence alignment and clusters it via neighbor-joining — entirely offline, no external aligner. A practical approximation, clearly labeled as such, with guidance toward dedicated tools for publication-grade trees. Tree image is copyable and savable too.</p>
         </article>
 
         <article class="feature-card">
@@ -111,8 +117,18 @@
         </article>
 
         <article class="feature-card">
+          <h3>Sequence Builder</h3>
+          <p>Hand-edit a sequence in a pop-out window — splice a gene into a vector backbone, for example. Verify checks it's a real DNA/RNA/protein sequence, toggle Highlight Codons / Highlight Promoters, run the full analysis pipeline inline, then save it back into your results. Add Insert locates a known promoter (T7/SP6/T3), splices in a validated coding insert right after it, and highlights exactly what changed.</p>
+        </article>
+
+        <article class="feature-card">
           <h3>Split view</h3>
           <p>Two independent result panes, each with its own search box, for eyeballing two sequences side by side.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Light/Dark mode</h3>
+          <p>Native Windows theming, not a generic reskin — switch between light and dark to match your system.</p>
         </article>
 
         <article class="feature-card">
@@ -173,8 +189,8 @@
   <div class="container footer-inner">
     <p>Built with Python, Biopython, PySide6/Qt, and Matplotlib.</p>
     <p class="footer-note">
-      The tree, digest, and primer tools are practical everyday helpers, not a replacement for a
-      rigorous phylogenetics or cloning-design pipeline.
+      The tree, digest, primer, and insert tools are practical everyday helpers, not a replacement
+      for a rigorous wet-lab or bioinformatics pipeline.
     </p>
   </div>
 </footer>
