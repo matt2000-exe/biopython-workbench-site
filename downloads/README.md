@@ -1,24 +1,26 @@
 # Downloads folder
 
-This folder is no longer where the live download link points.
-
-The site's download buttons now point at a stable GitHub Releases URL, hosted
-on the app's own repo (not this site repo):
+This folder is no longer where the live download links point. Everything
+downloadable — the exe and the sample data — is hosted as assets on the
+`latest` GitHub Release of the app's own repo (not this site repo):
 
 ```
 https://github.com/matt2000-exe/BioPythonWorkbench/releases/download/latest/BiopythonWorkbench.exe
+https://github.com/matt2000-exe/BioPythonWorkbench/releases/download/latest/_ncbi_example_sequences.fasta
+https://github.com/matt2000-exe/BioPythonWorkbench/releases/download/latest/_ncbi_example_pbr322.gb
 ```
 
-That link never changes, so shipping a new build does **not** require
-redeploying the Netlify site. To publish a new build, from the
-`BioPythonWorkbench` project (wherever the built exe comes out):
+Those links never change, so shipping a new build or updated sample data
+does **not** require redeploying the Netlify site. To publish an update,
+from the `BioPythonWorkbench` project:
 
 ```
 gh release upload latest BiopythonWorkbench.exe --clobber --repo matt2000-exe/BioPythonWorkbench
+gh release upload latest data/_ncbi_example_sequences.fasta data/_ncbi_example_pbr322.gb --clobber --repo matt2000-exe/BioPythonWorkbench
 ```
 
 `--clobber` replaces the existing asset in place.
 
-This folder still exists as a local staging spot for the exe before you
-upload it — it stays gitignored (`downloads/*.exe`) since the binary itself
-never needs to go into git.
+Only touch the site (and redeploy to Netlify) if the sample data's
+filenames change, or if the description text on the Downloads section
+needs updating to match what's actually in the files.

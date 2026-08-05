@@ -7,7 +7,7 @@ index.html
 css/style.css
 js/script.js
 assets/favicon.svg
-downloads/            <- local staging spot for BiopythonWorkbench.exe before release upload
+downloads/            <- just README.md; exe + sample data are hosted on GitHub Releases
 ```
 
 ## Running it in VS Code
@@ -27,16 +27,19 @@ Two options — pick whichever you already have:
    ```
 2. Open http://localhost:5500 in a browser.
 
-## Shipping a new build of the app
+## Shipping a new build or sample data update
 
-The download buttons point at a stable GitHub Releases URL hosted on the
+The download buttons (exe and sample data) all point at stable GitHub
+Releases URLs hosted on the
 [BioPythonWorkbench](https://github.com/matt2000-exe/BioPythonWorkbench) app
-repo, not this site repo — so a new build does **not** require touching the
-Netlify site:
+repo, not this site repo — so updating either does **not** require touching
+the Netlify site:
 
 ```
 gh release upload latest BiopythonWorkbench.exe --clobber --repo matt2000-exe/BioPythonWorkbench
+gh release upload latest data/_ncbi_example_sequences.fasta data/_ncbi_example_pbr322.gb --clobber --repo matt2000-exe/BioPythonWorkbench
 ```
 
-Only push/redeploy the site itself when the HTML/CSS/JS changes. See
-`downloads/README.md` for details.
+Only push/redeploy the site itself when the HTML/CSS/JS changes, or when a
+sample file's name/content changes enough that the description text on the
+Downloads section needs updating. See `downloads/README.md` for details.
