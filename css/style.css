@@ -244,6 +244,16 @@ img, svg {
   font-size: 1.05rem;
 }
 
+.section-sub a {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section-sub a:hover {
+  text-decoration: underline;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
