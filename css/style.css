@@ -141,6 +141,18 @@ img, svg {
   font-size: 1.05rem;
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  padding: 12px 22px;
+}
+
+.btn-outline:hover {
+  background: var(--brand);
+  color: var(--brand-contrast);
+}
+
 /* Hero */
 
 .hero {
@@ -363,6 +375,39 @@ img, svg {
 
 .download-inner .btn {
   margin-bottom: 14px;
+}
+
+/* Feedback */
+
+.feedback {
+  padding: 88px 0;
+  text-align: center;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.feedback-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.feedback-inner h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0 0 16px;
+}
+
+.feedback-inner p {
+  color: var(--text-muted);
+  margin: 0 0 32px;
+  font-size: 1.02rem;
+}
+
+.feedback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 /* Support */
