@@ -2,3 +2,5 @@ node_modules/
 downloads/*.exe
 .DS_Store
 .claude/settings.local.json
+.netlify/
+.netlify.env
